@@ -36,14 +36,18 @@ KEXUAN SONG \hfill\\
 
 \section{Introduction}
 The purpose of this document is to analyze and synthesize all the information about the situation of online learning, in order to generate comprehensive overview of the E-learning drive platform with needs and possible features.  It focuses on the users’ and stakeholders’ needs, the using environments and the reason of those needs. It also provides the proposal of the way that E-learning platform meets these needs.
-
+\bigskip
+\subsection{Scope}
+This Vision Document applies to the E-Concordia drive system, which will be developed by the development team. This system will allow trainers to upload the lessons to the Internet under supervision, so the students can learn and practice driving lessons online.
+\bigskip
 \subsection{References}
 \begin{enumerate}
 \setcounter{enumi}{0}
 \item \textit{Vision document}. Vision document for a requirements project. (n.d.).\\ https://www.ibm.com/docs/en/elm/7.0.1?topic=requirements-vision-document. \\
-\item Morales, R. (2021, July). \textit{Vision document. SOEN 6481.} \\ 
+\item Morales, R. (2021, July). \textit{Vision document. SOEN 6481.} \\
+\item \textit{Wireframe}. Detailed description about each user module.\\https://drive.google.com/drive/folders/1ZwPfXS0qTLdKUHz-8RnGFNUoWHh\_gsec
 \end{enumerate}
-
+\bigskip
 
 \section{Positioning}
 \subsection{Problem Statement}
@@ -54,35 +58,36 @@ The purpose of this document is to analyze and synthesize all the information ab
 \hline
 The problem of                 & Lacking platform to learn and practice the driving lessons online\medskip \\ \hline
 Affects                        & Student, trainer, driving school \\ \hline
-The impact of which is         & That students are not able to learn and practice at home, they can only spend more time travel to the driving school to learn on a specific time. Trainers has to repeat themselves many time to teach different group of students. The driving school has to spend extra time to make arrangement of class schedule and personnel. \\ \hline
-A successful solution would be & Provide classes online so the students can access the class anytime and anywhere, and provide a platform that student, trainer and driving school can both access to coordinate. \\
+The impact of which is         & That students are not able to learn and practice at home, they need to spend more time travel to the driving school to learn according to time schedule. 
+Trainers has to repeat themselves many times to teach different group of students. 
+The driving school has to spend extra time to make arrangement of class schedule and personnel. \\ \hline
+A successful solution would be & Provide classes online so the students can access lessons anytime and anywhere, and provide a platform that student, trainer and driving school can both access to coordinate. \\
 \hline
 \end{tabular}
 \end{table}
-\bigskip
+\pagebreak
 \subsection{Product Position Statement}
-\begin{table}[htb]
+\begin{table}[h]
 \centering
-\begin{tabular}{|a|p{8cm}|}
+\begin{tabular}{|a|p{10cm}|}
 \hline
 For                 & Driving schools\medskip \\ \hline
 Who                        & Needs to move their resources online \\ \hline
 The E-Concordia drive         & is a software product \\ \hline
 That & trainers can upload the study resources under supervision and students can study and practice online\\ \hline
-Unlike & The current state that students have to be at classroom to study and practice and the trainers have to teach the same content multiple times.  \\ \hline
+Unlike & The current state that students have to be in classroom to study and practice and the trainers have to teach the same content multiple times.  \\ \hline
 Our product & Makes the learning resources accessible everywhere and allows the reduce the workload of trainers. \\ 
 \hline
 \end{tabular}
 \end{table}
 \bigskip
-\pagebreak
 
 \section{Stakeholder Descriptions}
 \subsection{Stakeholder Summary}
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|}
+\begin{tabular}{|p{4cm}|p{4cm}|p{5cm}|}
 \hline
 \rowcolor{gray}
 Name & Description & Responsibilities \\ \hline
@@ -99,13 +104,13 @@ Software company & The company who takes responsibility of development & Provide
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|p{2cm}|p{3cm}|p{4cm}|l|}
+\begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|l|}
 \hline
 \rowcolor{gray}
 Name & Description & Responsibilities & Stakeholder \\ \hline
-Student & The end user who registered to the driving school to take courses & takes the online courses & Self-represented \\ \hline
-Trainer & The end user who uploads the course resources and monitor the students’ study & Upload course resources and make study plans & Self-represented \\ \hline
-Admin & The end user who performs quality check of the course content & edits, comments, approves and publishes  lessons uploaded by a trainer & Self-represented \\ 
+Student & The end user who registered to the driving school to take courses & takes the online courses & Driving school \\ \hline
+Trainer & The end user who uploads the course resources and monitor the students’ study & upload course resources and make correction according to the admin's comment& Driving school \\ \hline
+Admin & The end user who performs quality check of the course content & edits, comments, approves and publishes  lessons uploaded by a trainer & Driving school \\ 
 \hline
 
 \end{tabular}
@@ -113,7 +118,7 @@ Admin & The end user who performs quality check of the course content & edits, c
 
 \bigskip
 \subsection{User Environment}
-Individual will log in via computers when they want to access or update the study resources. They will connect to the website and view or edit the content of courses and tests. The amount of time spent could not be specified yet, but it could be related to the course length. \\
+Individual will log in via computers when they want to access or update the study resources. They will connect to the website and view or edit the content of courses and quizzes. The amount of time spent could not be specified yet, but it could be related to the course length. \\
 Students will be expected to have a device capable of watching videos and interact with browser.\\
 Trainers will be expected to have a browser-enabled device for uploading videos and make changes to courses. \\
 Admins will be expected to have device that support all above in order to perform quality check.
@@ -158,7 +163,8 @@ The product will fill the gap of online learning with a user-friendly interface 
 \rowcolor{gray}
 Assumptions & Dependencies\\ \hline
 All students and trainers have device and access to Internet & Internet availability\\ \hline
-Every student will get necessary credentials to log in & External API \\
+Every student will get necessary credentials to log in & External API \\ \hline
+The database is able to scale up to hold data with increasing amount of use & Database \\ 
 \hline
 \end{tabular}
 \end{table}
@@ -171,7 +177,7 @@ Trainer and admin shall provide valid username and password to log in to the E-c
 Students shall provide the student number, traffic number and file number to log in.
 \bigskip
 \subsection{System Update}
-The system shall enable admin to view the updates of the system with details, including updated lessons, updated comments and new quality comment. The system shall protect the information from user other than admin.
+The system shall enable admin and trainer to view the updates of the system with details, including updated lessons, updated comments and new quality comment. The system shall protect the information from user other than admin and trainer.
 \bigskip
 \subsection{Comment}
 Admin shall make comments to slides uploaded by trainers and track the correction status of the comments.  Trainer would get notification if their lessons were commented. The status would update once trainer fix the issue.
@@ -197,12 +203,29 @@ The system must comply with existing web standards(HTTP, HTML DOM,etc).
 
 \medskip
 \textbf{Performance Requirements:}\\
-The system must be able to handle 50000 users at the same time with 95\% of response lower than 9 seconds. \\
-The system response time must be lower than 10 seconds.
+The system must be able to handle 50000 users at the same time with 95\% of response lower than 2 seconds. \\
+The system response time must be lower than 5 seconds.
 
 \medskip
 \textbf{Documentation Requirements: }\\
 No user manual. The system must be easy enough for a user to use without manual.\\
 Online help. A user guide need to be provided when a user log in for the first time.\\
+
+\section{Appendix}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{5cm}|p{5cm}|}
+\hline
+\rowcolor{gray}
+Part & Time Spent\\ \hline
+Part 1 & 1 hour\\ \hline
+Part 2 & 2 hours\\ \hline
+Part 3 & 4 hours\\ \hline
+Part 4 & 1.5 hours \\ \hline
+Part 5 & 2.5 hours\\ \hline
+Part 6 & 1 hour\\ 
+\hline
+\end{tabular}
+\end{table}
 
 \end{document}
