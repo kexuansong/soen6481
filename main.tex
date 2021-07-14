@@ -2,7 +2,6 @@
 \input{head}
 \graphicspath{ {/Users/kexuansong/Downloads/} }
 
-
 \begin{document}
 
 %-------------------------------
@@ -37,14 +36,21 @@ KEXUAN SONG \hfill\\
 
 \section{Introduction}
 The purpose of this document is to analyze and synthesize all the information about the situation of online learning, in order to generate comprehensive overview of the E-learning drive platform with needs and possible features.  It focuses on the users’ and stakeholders’ needs, the using environments and the reason of those needs. It also provides the proposal of the way that E-learning platform meets these needs.
+
 \subsection{References}
+\begin{enumerate}
+\setcounter{enumi}{0}
+\item \textit{Vision document}. Vision document for a requirements project. (n.d.).\\ https://www.ibm.com/docs/en/elm/7.0.1?topic=requirements-vision-document. \\
+\item Morales, R. (2021, July). \textit{Vision document. SOEN 6481.} \\ 
+\end{enumerate}
 
 
 \section{Positioning}
 \subsection{Problem Statement}
 \newcolumntype{a}{ >{\columncolor{gray}} c}
 \begin{table}[htb]
-\begin{tabular}{|a|p{11cm}|}
+\centering
+\begin{tabular}{|a|p{8cm}|}
 \hline
 The problem of                 & Lacking platform to learn and practice the driving lessons online\medskip \\ \hline
 Affects                        & Student, trainer, driving school \\ \hline
@@ -56,7 +62,8 @@ A successful solution would be & Provide classes online so the students can acce
 \bigskip
 \subsection{Product Position Statement}
 \begin{table}[htb]
-\begin{tabular}{|a|p{12.2cm}|}
+\centering
+\begin{tabular}{|a|p{8cm}|}
 \hline
 For                 & Driving schools\medskip \\ \hline
 Who                        & Needs to move their resources online \\ \hline
@@ -68,13 +75,16 @@ Our product & Makes the learning resources accessible everywhere and allows the 
 \end{tabular}
 \end{table}
 \bigskip
+\pagebreak
 
 \section{Stakeholder Descriptions}
 \subsection{Stakeholder Summary}
-\pagebreak
-\begin{table}[ht]
-\begin{tabular}{|l|p{6cm}|p{6cm}|}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|}
 \hline
+\rowcolor{gray}
 Name & Description & Responsibilities \\ \hline
 Project manager & The head of the development team & Manages the whole development process of development, makes sure the team meets the schedule, budget and requirement. \\ \hline
 Development team & The people who perform the work of the project. & Develop the project that customer needs under the project manager’s lead. \\ \hline
@@ -87,10 +97,11 @@ Software company & The company who takes responsibility of development & Provide
 
 \subsection{User Summary}
 
-\begin{table}[h]
+\begin{table}[!htb]
 \centering
-\begin{tabular}{|l|p{5cm}|p{5cm}|l|}
+\begin{tabular}{|p{2cm}|p{3cm}|p{4cm}|l|}
 \hline
+\rowcolor{gray}
 Name & Description & Responsibilities & Stakeholder \\ \hline
 Student & The end user who registered to the driving school to take courses & takes the online courses & Self-represented \\ \hline
 Trainer & The end user who uploads the course resources and monitor the students’ study & Upload course resources and make study plans & Self-represented \\ \hline
@@ -102,14 +113,19 @@ Admin & The end user who performs quality check of the course content & edits, c
 
 \bigskip
 \subsection{User Environment}
-
+Individual will log in via computers when they want to access or update the study resources. They will connect to the website and view or edit the content of courses and tests. The amount of time spent could not be specified yet, but it could be related to the course length. \\
+Students will be expected to have a device capable of watching videos and interact with browser.\\
+Trainers will be expected to have a browser-enabled device for uploading videos and make changes to courses. \\
+Admins will be expected to have device that support all above in order to perform quality check.
 
 
 \bigskip
+\pagebreak
 \subsection{Key Stakeholder or User Needs}
 \begin{table}[!htb]
 \begin{tabular}{|p{1.5cm}|p{3cm}|l|p{2cm}|p{2cm}|p{3.8cm}|}
 \hline
+\rowcolor{gray}
 User & Need & Priority & Concerns & Current Solution & Proposed Solutions \\ \hline
 Student & Watch lessons online & High & None & None(in-person class) & Provide link to videos \\ \hline
  & Take quizzes online & High & Immediate feedback & None(on paper) & Show correct answer right after students gave their answer\\ \hline
@@ -126,19 +142,20 @@ Trainer \& admin & Upload videos & High & None & None(in-person classes) & Provi
 \bigskip
 \section{Product Overview}
 \subsection{Product Perspective}
-The product will fill the gap of online learning with a user-friendly interface and a lot of new features.\\ The system may be viewed as follows: \\
-
+The product will fill the gap of online learning with a user-friendly interface and a lot of new features. The system may be viewed as follows: \\
 \begin{figure}[h]
-\includegraphics[width=12cm, height=8cm] {a1} 
+\includegraphics[width=12cm, height=8cm] {a1}
 \centering
 \end{figure}
-
 \bigskip
+
 \subsection{Assumptions and Dependencies}
-\begin{table}[ht]
+
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{5cm}|p{5cm}|}
 \hline
+\rowcolor{gray}
 Assumptions & Dependencies\\ \hline
 All students and trainers have device and access to Internet & Internet availability\\ \hline
 Every student will get necessary credentials to log in & External API \\
@@ -175,12 +192,17 @@ E-learning slider displays the content slides. It has interactive screen and tra
 
 
 \section{Other Product Features}
-Applicable standards. The system must comply with existing web standards(HTTP, HTML DOM,etc).
-Performance Requirements:
-The system must be able to handle 50000 users at the same time with 95\% of response lower than 9 seconds. 
+\textbf{Applicable standards:}\\
+The system must comply with existing web standards(HTTP, HTML DOM,etc).
+
+\medskip
+\textbf{Performance Requirements:}\\
+The system must be able to handle 50000 users at the same time with 95\% of response lower than 9 seconds. \\
 The system response time must be lower than 10 seconds.
-Documentation Requirements: 
-No user manual. The system must be easy enough for a user to use without manual.
-Online help. A user guide need to be provided when a user log in for the first time.
+
+\medskip
+\textbf{Documentation Requirements: }\\
+No user manual. The system must be easy enough for a user to use without manual.\\
+Online help. A user guide need to be provided when a user log in for the first time.\\
 
 \end{document}
